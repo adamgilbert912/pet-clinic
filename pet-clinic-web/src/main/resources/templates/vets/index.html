@@ -5,6 +5,18 @@
     <title>Vets</title>
 </head>
 <body>
-  <h1 th:text="'vets'">Some text..</h1>
+<h2>Veterinarians</h2>
+<table id="vets" class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="vet : ${vets}">
+        <td th:text="${vet.firstName + ' ' + vet.lastName}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
